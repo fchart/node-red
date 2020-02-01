@@ -1,0 +1,941 @@
+{
+    "common": {
+        "label": {
+            "payload": "訊息主體",
+            "topic": "主題",
+            "name": "名稱",
+            "username": "使用者名稱",
+            "password": "使用者密碼",
+            "property": "屬性",
+            "selectNodes": "選取節點...",
+            "expand": "展開"
+        },
+        "status": {
+            "connected": "已連線",
+            "not-connected": "未連線",
+            "disconnected": "中斷連線",
+            "connecting": "連線中",
+            "error": "錯誤",
+            "ok": "確定"
+        },
+        "notification": {
+            "error": "<strong>錯誤</strong>: __message__",
+            "errors": {
+                "not-deployed": "節點尚未部署",
+                "no-response": "伺服器無回應",
+                "unexpected": "未預期錯誤 (__status__) __message__"
+            }
+        },
+        "errors": {
+            "nooverride": "警告: msg 的屬性已經不再可以覆寫 set 節點的屬性. 詳情參考 bit.ly/nr-override-msg-props"
+        }
+    },
+    "inject": {
+        "inject": "inject",
+        "repeat": "重複 = __repeat__",
+        "crontab": "crontab = __crontab__",
+        "stopped": "停止",
+        "failed": "inject 注入失敗: __error__",
+        "label": {
+            "repeat": "重複",
+            "flow": "流程上下文",
+            "global": "全域上下文",
+            "str": "string",
+            "num": "number",
+            "bool": "boolean",
+            "json": "object",
+            "bin": "buffer",
+            "date": "timestamp",
+            "env": "env variable",
+            "object": "object",
+            "string": "string",
+            "boolean": "boolean",
+            "number": "number",
+            "Array": "Array",
+            "invalid": "Invalid JSON Object"
+        },
+        "timestamp": "timestamp",
+        "none": "無",
+        "interval": "週期性執行",
+        "interval-time": "指定時間間隔來週期性執行",
+        "time": "在特定時間",
+        "seconds": "秒",
+        "minutes": "分鐘",
+        "hours": "小時",
+        "between": "介於時間",
+        "previous": "之前數值",
+        "at": "在時間",
+        "and": "至",
+        "every": "每隔",
+        "days": [
+            "星期一",
+            "星期二",
+            "星期三",
+            "星期四",
+            "星期五",
+            "星期六",
+            "星期天"
+        ],
+        "on": "在",
+        "onstart": "立刻在",
+        "onceDelay": "秒後執行, 然後",
+        "tip": "<b>注意：</b>\"指定時間間隔來週期性執行\"和\"在特定時間\"將使用cron。<br/>\"週期性執行\"應為596小時或更短。請參閱側邊欄的資訊標籤頁。",
+        "success": "成功 inject 注入: __label__",
+        "errors": {
+            "failed": "inject 注入失敗, 請檢視日誌",
+            "toolong": "週期過長"
+        }
+    },
+    "catch": {
+        "catch": "捕捉: 全部",
+        "catchNodes": "捕捉: __number__",
+        "catchUncaught": "捕捉：沒捉到",
+        "label": {
+            "source": "捕捉錯誤從",
+            "selectAll": "選取全部",
+            "uncaught": "忽略其他 catch 節點處理的錯誤"
+        },
+        "scope": {
+            "all": "所有節點",
+            "selected": "選取節點"
+        }
+    },
+    "status": {
+        "status": "狀態: 全部",
+        "statusNodes": "狀態: __number__",
+        "label": {
+            "source": "報告狀態從",
+            "sortByType": "使用類型排序"
+        },
+        "scope": {
+            "all": "所有節點",
+            "selected": "選取節點"
+        }
+    },
+    "complete": {
+        "completeNodes": "完成: __number__"        
+    },
+    "debug": {
+        "output": "輸出",
+        "none": "無",
+        "invalid-exp": "無效 JSONata 表達式: __error__",
+        "msgprop": "訊息屬性",
+        "msgobj": "完整 msg 物件",
+        "to": "至",
+        "debtab": "除錯標籤",
+        "tabcon": "除錯標籤和主控台",
+        "toSidebar": "除錯視窗",
+        "toConsole": "系統主控台",
+        "toStatus": "節點狀態 (32 字元)",
+        "severity": "等級",
+        "notification": {
+            "activated": "成功啟動: __label__",
+            "deactivated": "成功停用: __label__"
+        },
+        "sidebar": {
+            "label": "除錯",
+            "name": "除錯資訊",
+            "filterAll": "所有節點",
+            "filterSelected": "選取節點",
+            "filterCurrent": "目前流程",
+            "debugNodes": "除錯節點",
+            "clearLog": "清空日誌",
+            "filterLog": "篩選日誌",
+            "openWindow": "在新視窗開啟",
+            "copyPath": "複製路徑",
+            "copyPayload": "複製值",
+            "pinPath": "固定開啟"
+        },
+        "messageMenu": {
+            "collapseAll": "摺疊所有路徑",
+            "clearPinned": "清空已固定路徑",
+            "filterNode": "篩選此節點",
+            "clearFilter": "清空篩選"
+        }
+    },
+    "link": {
+        "linkIn": "虛擬連接進",
+        "linkOut": "虛擬連接出"
+    },
+    "tls": {
+        "tls": "TLS 設置",
+        "label": {
+            "use-local-files": "使用本機金鑰和憑證檔案",
+            "upload": "上傳",
+            "cert": "憑證",
+            "key": "私鑰",
+            "passphrase": "密碼短語",
+            "ca": "CA 憑證",
+            "verify-server-cert":"驗證伺服器憑證",
+            "servername": "伺服器名稱"
+        },
+        "placeholder": {
+            "cert":"憑證路徑 (PEM 格式)",
+            "key":"私鑰路徑 (PEM 格式)",
+            "ca":"CA 憑證路徑 (PEM 格式)",
+            "passphrase":"私鑰密碼短語 (可選)",
+            "servername":"用於 SNI"
+        },
+        "error": {
+            "missing-file": "未提供憑證/金鑰檔案"
+        }
+    },
+    "exec": {
+        "exec": "exec",
+        "spawn": "spawn",
+        "label": {
+            "command": "命令",
+            "append": "附加",
+            "timeout": "逾時",
+            "timeoutplace": "可選填",
+            "return": "輸出",
+            "seconds": "秒",
+            "stdout": "標準輸出",
+            "stderr": "標準錯誤",
+            "retcode": "回傳程式碼"
+        },
+        "placeholder": {
+            "extraparams": "額外的輸入參數"
+        },
+        "opt": {
+            "exec": "當命令完成時 - exec 模式",
+            "spawn": "當命令進行時 - spawn 模式"
+        },
+        "oldrc": "使用舊式輸出 (相容模式)"
+    },
+    "function": {
+        "function": "",
+        "label": {
+            "function": "函數的實作",
+            "outputs": "輸出"
+        },
+        "error": {
+            "inputListener":"無法在函數新增 'input' 事件的監聽者",
+            "non-message-returned":"函數嘗試送出 __type__ 型別的訊息"
+        }
+    },
+    "template": {
+        "template": "template",
+        "label": {
+            "template": "樣版",
+            "property": "屬性",
+            "format": "語法高亮度",
+            "syntax": "格式",
+            "output": "輸出為",
+            "mustache": "Mustache 樣版",
+            "plain": "純文字",
+            "json": "JSON",
+            "yaml": "YAML",
+            "none": "無"
+        },
+        "templatevalue": "這是訊息主體: {{payload}} !"
+    },
+    "delay": {
+        "action": "選擇操作",
+        "for": "延遲時間",
+        "delaymsg": "延遲每條訊息",
+        "delayfixed": "固定延遲時間",
+        "delayvarmsg": "使用 msg.delay 覆寫延遲時間",
+        "randomdelay": "隨機延遲時間",
+        "limitrate": "限制速率",
+        "limitall": "所有訊息",
+        "limittopic": "針對每一個 msg.topic",
+        "fairqueue": "依次發送每一個主題",
+        "timedqueue": "發送所有主題",
+        "milisecs": "毫秒",
+        "secs": "秒",
+        "sec": "秒",
+        "mins": "分",
+        "min": "分",
+        "hours": "小時",
+        "hour": "小時",
+        "days": "天",
+        "day": "天",
+        "between": "介於",
+        "and": "至",
+        "rate": "速率",
+        "msgper": "訊息數 每",
+        "dropmsg": "刪除中間的訊息",
+        "label": {
+            "delay": "延遲",
+            "variable": "變數",
+            "limit": "限制",
+            "limitTopic": "限制主題",
+            "random": "隨機",
+            "units" : {
+                "second": {
+                    "plural" : "秒",
+                    "singular": "秒"
+                },
+                "minute": {
+                    "plural" : "分鐘",
+                    "singular": "分鐘"
+                },
+                "hour": {
+                    "plural" : "小時",
+                    "singular": "小時"
+                },
+                "day": {
+                    "plural" : "天",
+                    "singular": "天"
+                }
+            }
+        },
+        "error": {
+            "buffer": "已經緩衝超過 1000 條訊息",
+            "buffer1": "已經緩衝超過 10000 條訊息"
+        }
+    },
+    "trigger": {
+        "send": "傳送",
+        "then": "然後",
+        "then-send": "然後傳送",
+        "output": {
+            "string": "字串",
+            "number": "數值",
+            "existing": "現存的 msg 物件",
+            "original": "原本的 msg 物件",
+            "latest": "最近的 msg 物件",
+            "nothing": "無"
+        },
+        "wait-reset": "等待被重置",
+        "wait-for": "等待",
+        "wait-loop": "重送它, 間隔每",
+        "for": "處理",
+        "bytopics": "每一個獨立的 msg.topic",
+        "alltopics": "所有訊息",
+        "duration": {
+            "ms": "毫秒",
+            "s": "秒",
+            "m": "分鐘",
+            "h": "小時"
+        },
+        "extend": " 如果有新訊息到來，就延長延遲時間",
+        "label": {
+            "trigger": "觸發",
+            "trigger-block": "觸發和阻擋",
+            "trigger-loop": "重送每一個",
+            "reset": "重置觸發 如果:",
+            "resetMessage":"msg.reset 已設定",
+            "resetPayload":"msg.payload 等於",
+            "resetprompt": "可選填"
+        }
+    },
+    "comment": {
+        "comment": "註解"
+    },
+    "unknown": {
+        "label": {
+            "unknown": "未知"
+        },
+        "tip": "<p>此節點是你安裝的 Node-RED 沒有支援的類型。</p><p><i>如果在此狀態部署節點，其配置將會被保留，但是流程將不會啟動，直到你安裝缺少的節點類型。</i></p><p>如果需要更多幫助，請參閱資訊側邊欄</p>"
+    },
+    "mqtt": {
+        "label": {
+            "broker": "代理人",
+            "example": "例如: localhost",
+            "output": "輸出",
+            "qos": "QoS 品質",
+            "retain": "保留", 
+            "clientid": "客戶端 ID",
+            "port": "埠號",
+            "keepalive": "保持連線時間 (秒)",
+            "cleansession": "使用乾淨的交談期",
+            "use-tls": "使用安全連線 (SSL/TLS)",
+            "tls-config":"TLS 設定",
+            "verify-server-cert":"驗證伺服器認證",
+            "compatmode": "使用舊版 MQTT 3.1 支援"
+        },
+        "sections-label":{
+            "birth-message": "連線發送的訊息（最初 birth 訊息）",
+            "will-message":"在未知斷線時發送的訊息（遺囑 will 訊息）",
+            "close-message":"在斷線前發送的訊息 (關閉 close 訊息)"
+        },
+        "tabs-label": {
+            "connection": "連線",
+            "security": "安全性",
+            "messages": "訊息"
+        },
+        "placeholder": {
+            "clientid": "保留空白來自動產生客戶端 ID",
+            "clientid-nonclean":"對於非乾淨的交談期必須設定",
+            "will-topic": "保留空白來停用遺囑訊息",
+            "birth-topic": "保留空白來停用最初訊息",
+            "close-topic": "保留空白來停用關閉訊息"
+        },
+        "state": {
+            "connected": "已連線到代理人: __broker__",
+            "disconnected": "已中斷與代理人 __broker__ 的連線",
+            "connect-failed": "與代理人 __broker__ 的連線失敗"
+        },
+        "retain": "保留",
+        "output": {
+            "buffer": "一個緩衝區",
+            "string": "一個字串",
+            "base64": "一個 Base64 編碼字串",
+            "auto": "自動偵測 (字串或緩衝區)",
+            "json": "一個剖析的 JSON 物件"
+        },
+        "true": "真",
+        "false": "假",
+        "tip": "提示：如果你要使用 msg 屬性來設定，請在主题，QoS或保留欄位保持空白。",
+        "errors": {
+            "not-defined": "主題未設定",
+            "missing-config": "遺失代理人設置",
+            "invalid-topic": "無效的主題",
+            "nonclean-missingclientid": "客戶端ID未設定，使用乾淨的交談期",
+            "invalid-json-string": "無效的 JSON 字串",
+            "invalid-json-parse": "剖析 JSON 字串失敗"
+        }
+    },
+    "httpin": {
+        "label": {
+            "method": "請求方法",
+            "url": "URL",
+            "doc": "文件",
+            "return": "回傳",
+            "upload": "接受檔案上傳?",
+            "status": "狀態碼",
+            "headers": "標頭",
+            "other": "其他",
+            "paytoqs" : "附加 msg.payload 成為查詢字串參數",
+            "utf8String": "UTF8 字串",
+            "binaryBuffer": "二進位緩衝區",
+            "jsonObject": "剖析的 JSON 物件",
+            "authType": "認證類型",
+            "bearerToken": "權杖"
+        },
+        "setby": "- 使用 msg.method 設定 -",
+        "basicauth": "使用認證",
+        "use-tls": "使用安全連線 (SSL/TLS) ",
+        "tls-config":"TLS 設定",
+        "basic": "基本認證",
+        "digest": "摘要認證",
+        "bearer": "承載認證",
+        "use-proxy": "使用 Proxy",
+        "persist": "啟用保持連線",
+        "proxy-config": "Proxy 設置",
+        "use-proxyauth": "使用 Proxy 認證",
+        "noproxy-hosts": "忽略主機",
+        "utf8": "UTF-8 字串",
+        "binary": "二進位緩衝區",
+        "json": "剖析的 JSON 物件",
+        "tip": {
+            "in": "相對的 URL",
+            "res": "傳送到此節點的訊息<b>必須</b>來自<i>http input</i>節點",
+            "req": "提示：如果 JSON 剖析失敗，取得的字串將以原始內容回傳."
+        },
+        "httpreq": "http request",
+        "errors": {
+            "not-created": "當 httpNodeRoot 為否時，無法建立 http-in 節點",
+            "missing-path": "遺失路徑",
+            "no-response": "無回應物件",
+            "json-error": "JSON 剖析錯誤",
+            "no-url": "未設定 URL",
+            "deprecated-call":"__method__ 方法已經不推薦使用",
+            "invalid-transport":"非 HTTP 傳輸請求",
+            "timeout-isnan": "逾時值並非合法數值, 忽略它",
+            "timeout-isnegative": "逾時值是負值, 忽略它",
+            "invalid-payload": "無效的 payload 訊息主體"
+        },
+        "status": {
+            "requesting": "請求中"
+        }
+    },
+    "websocket": {
+        "label": {
+            "type": "類型",
+            "path": "路徑",
+            "url": "URL"
+        },
+        "listenon": "監聽",
+        "connectto": "連線",
+        "sendrec": "傳送/接受",
+        "payload": "訊息主體 payload",
+        "message": "完整訊息",
+        "tip": {
+            "path1": "在預設情況下，<code>payload</code> 將包含要傳送或從 Websocket 接收的資料。監聽者可以設置為傳送或接收整個 JSON 格式字串的訊息物件.",
+            "path2": "這條路徑將相對於 ",
+            "url1": "URL 應該使用 ws:&#47;&#47; 或 wss:&#47;&#47; 來連線現有的 websocket 監聽者.",
+            "url2": "在預設情況下，<code>payload</code> 將包含要傳送或從 Websocket 接收的資料。可以將客戶端設置為傳送或接收整個 JSON 格式字串的訊息物件."
+        },
+        "status": {
+            "connected": "已連線數 __count__",
+            "connected_plural": "已連線數 __count__"
+        },
+        "errors": {
+            "connect-error": "ws 連線發生錯誤: ",
+            "send-error": "傳送時發生錯誤: ",
+            "missing-conf": "未設定伺服器",
+            "duplicate-path": "無法有2個 WebSocket 監聽者在相同路徑: __path__"
+        }
+    },
+    "watch": {
+        "watch": "watch",
+        "label": {
+            "files": "檔案",
+            "recursive": "遞迴所有子資料夾"
+        },
+        "placeholder": {
+            "files": "請使用逗號分隔檔案或資料夾"
+        },
+        "tip": "在 Windows 作業系統，請務必使用雙斜線 \\\\ 來分隔資料夾名稱"
+    },
+    "tcpin": {
+        "label": {
+            "type": "類型",
+            "output": "輸出",
+            "port": "埠號",
+            "host": "主機地址",
+            "payload": "訊息主體",
+            "delimited": "分隔符號",
+            "close-connection": "是否在成功傳送每條訊息後中斷連線?",
+            "decode-base64": "使用 Base64 解碼訊息?",
+            "server": "伺服器",
+            "return": "回傳",
+            "ms": "毫秒",
+            "chars": "字元"
+        },
+        "type": {
+            "listen": "監聽",
+            "connect": "連線",
+            "reply": "回應 TCP"
+        },
+        "output": {
+            "stream": "字串流",
+            "single": "單一",
+            "buffer": "緩衝區",
+            "string": "字串",
+            "base64": "Base64 字串"
+        },
+        "return": {
+            "timeout": "在固定逾時時間後",
+            "character": "當收到某個字元是",
+            "number": "固定字元數",
+            "never": "永不 - 保持連線",
+            "immed": "馬上 - 不需要等待回應"
+        },
+        "status": {
+            "connecting": "正在連線到 __host__:__port__",
+            "connected": "已經連線到 __host__:__port__",
+            "listening-port": "監聽埠 __port__",
+            "stopped-listening": "已經停止監聽埠",
+            "connection-from": "連線來自 __host__:__port__",
+            "connection-closed": "連線已經關閉 __host__:__port__",
+            "connections": "__count__ 個連線",
+            "connections_plural": "__count__ 個連線"
+
+        },
+        "errors": {
+            "connection-lost": "連線中斷 __host__:__port__",
+            "timeout": "逾時關閉 Socket 連線，埠號 __port__",
+            "cannot-listen": "無法監聽埠號 __port__, 錯誤: __error__",
+            "error": "錯誤: __error__",
+
+            "socket-error": "Socket 連線錯誤來自 __host__:__port__",
+            "no-host": "主機地址或埠號未設定",
+            "connect-timeout": "連線逾時",
+            "connect-fail": "連線失敗"
+        }
+    },
+    "udp": {
+        "label": {
+            "listen": "監聽",
+            "onport": "埠號",
+            "using": "使用",
+            "output": "輸出",
+            "group": "群組",
+            "interface": "本機 IF",
+            "send": "傳送一個",
+            "toport": "到埠",
+            "address": "地址",
+            "decode-base64": "是否解碼 Base64 編碼的資訊?"
+        },
+        "placeholder": {
+            "interface": "（可選）eth0 的 IP 地址",
+            "interfaceprompt": "(可選) 本機介面或地址繫結至",
+            "address": "目標IP地址"
+        },
+        "udpmsgs": "udp 訊息",
+        "mcmsgs": "多重傳播訊息",
+        "udpmsg": "udp 訊息",
+        "bcmsg": "廣播訊息",
+        "mcmsg": "多重傳播訊息",
+        "output": {
+            "buffer": "緩衝區",
+            "string": "字串",
+            "base64": "Base64 編碼字串"
+        },
+        "bind": {
+            "random": "繫結到任意的本機埠號",
+            "local": "繫結到本機埠號",
+            "target": "繫結到目標埠號"
+        },
+        "tip": {
+            "in": "提示：請確認你電腦的防火牆可以允許資料進入",
+            "out": "提示：如果要使用 <code>msg.ip</code> 和 <code>msg.port</code> 設定，請將地址和埠號欄位留空白",
+            "port": "正在使用埠號: "
+        },
+        "status": {
+            "listener-at": "udp 監聽者正在監聽 __host__:__port__",
+            "mc-group": "udp 多重傳播到 __group__",
+            "listener-stopped": "udp 監聽者已經停止",
+            "output-stopped": "udp 輸出已經停止",
+            "mc-ready": "udp 多重傳播已經準備好: __outport__ -> __host__:__port__",
+            "bc-ready": "udp 廣播已經準備好: __outport__ -> __host__:__port__",
+            "ready": "udp 已經準備好: __outport__ -> __host__:__port__",
+            "ready-nolocal": "udp 已經準備好: __host__:__port__",
+            "re-use": "udp 重用 Socket: __outport__ -> __host__:__port__"
+        },
+        "errors": {
+            "access-error": "UDP 存取錯誤, 你可能需要 root 權限才能連接 1024 以下的埠號",
+            "error": "錯誤: __error__",
+            "bad-mcaddress": "無效的多重傳播地址",
+            "interface": "必須是指定介面的 IP 地址",
+            "ip-notset": "udp: IP 地址未設定",
+            "port-notset": "udp: 埠號未設定",
+            "port-invalid": "udp: 無效埠號碼",
+            "alreadyused": "udp: 埠號已經被佔用",
+            "ifnotfound": "udp: 介面 __iface__ 沒有找到"
+        }
+    },
+    "switch": {
+        "switch": "switch",
+        "label": {
+            "property": "屬性",
+            "rule": "規則",
+            "repair" : "重建訊息順序"
+        },
+        "previous": "前一個值",
+        "and": "和",
+        "checkall": "檢查所有規則",
+        "stopfirst": "在第一個規則符合後停止",
+        "ignorecase": "忽略大小寫",
+        "rules": {
+            "btwn": "is between",
+            "cont": "contains",
+            "regex": "matches regex",
+            "true": "is true",
+            "false": "is false",
+            "null": "is null",
+            "nnull": "is not null",
+            "istype": "is of type",
+            "empty": "is empty",
+            "nempty": "is not empty",
+            "head": "head",
+            "tail": "tail",
+            "index": "index between",
+            "exp": "JSONata exp",
+            "else": "otherwise",
+            "hask": "has key"
+        },
+        "errors": {
+            "invalid-expr": "無效的 JSONata 表達式: __error__",
+            "too-many" : "在 switch 節點中有太多的待處理訊息"
+        }
+    },
+    "change": { 
+        "label": {
+            "rules": "規則",
+            "rule": "規則",
+            "set": "指定 __property__",
+            "change": "變更 __property__",
+            "delete": "刪除 __property__",
+            "move": "移動 __property__",
+            "changeCount": "修改: __count__ 條規則",
+            "regex": "使用正規表達式"
+        },
+        "action": {
+            "set": "指定",
+            "change": "變更",
+            "delete": "刪除",
+            "move": "移動",
+            "to": "到",
+            "search": "搜尋",
+            "replace": "取代為"
+        },
+        "errors": {
+            "invalid-from": "無效的 'from' 屬性: __error__",
+            "invalid-json": "無效的 'to' JSON 屬性",
+            "invalid-expr": "無效的 JSONata 表達式: __error__"
+        }
+    },
+    "range": {
+        "range": "range",
+        "label": {
+            "action": "操作",
+            "inputrange": "對應輸入範圍",
+            "resultrange": "到目標範圍",
+            "from": "從",
+            "to": "到",
+            "roundresult": "取結果是最接近的整數？"
+        },
+        "placeholder": {
+            "min": "例如: 0",
+            "maxin": "例如: 99",
+            "maxout": "例如: 255"
+        },
+        "scale": {
+            "payload": "線性縮放訊息屬性(可能超過目標範圍)",
+            "limit": "線性縮放並限制在目標範圍內",
+            "wrap": "線性縮放並取餘數來調整至目標範圍內"
+        },
+        "tip": "提示: 此節點僅支援屬性值是數值",
+        "errors": {
+            "notnumber": "不是一個數值"
+        }
+    },
+    "csv": {
+        "label": {
+            "columns": "每一列",
+            "separator": "分隔符號",
+            "c2o": "CSV 至物件選項",
+            "o2c": "物件至 CSV 選項",
+            "input": "輸入",
+            "skip-s": "跳過前",
+            "skip-e": "行",
+            "firstrow": "第一列是欄名",
+            "output": "輸出",
+            "includerow": "包含欄名列",
+            "newline": "換行符號",
+            "usestrings": "剖析數值"
+        },
+        "placeholder": {
+            "columns": "使用逗號分割欄位"
+        },
+        "separator": {
+            "comma": "逗號 - ','",
+            "tab": "Tab鍵",
+            "space": "空格 - ' '",
+            "semicolon": "分號 - ';'",
+            "colon": "冒號 - ':'",
+            "hashtag": "井號 - '#'",
+            "other": "其他符號..."
+        },
+        "output": {
+            "row": "每列一條訊息",
+            "array": "單一訊息 [陣列]"
+        },
+        "newline": {
+            "linux": "Linux (\\n)",
+            "mac": "Mac (\\r)",
+            "windows": "Windows (\\r\\n)"
+        },
+        "errors": {
+            "csv_js": "此節點僅能處理 CSV 字串或 JS 物件",
+            "obj_csv": "沒有設定欄位樣版轉換物件 -> CSV"
+        }
+    },
+    "html": {
+        "label": {
+            "select": "CSS 選擇器",
+            "output": "輸出", 
+            "in": "到"
+        },
+        "output": {
+            "html": "元素的 HTML 內容",
+            "text": "只有元素的文字內容",
+            "attr": "元素任何屬性的物件"
+        },
+        "format": {
+            "single": "包含一個陣列的單一訊息",
+            "multi": "多個訊息，每個元素是一個訊息"
+        }
+    },
+    "json": {
+        "errors": {
+            "dropped-object": "忽略非物件的 payload 訊息主體",
+            "dropped": "忽略不支援的 payload 訊息主體型別",
+            "dropped-error": "轉換 payload 訊息主體失敗",
+            "schema-error": "JSON Schema 錯誤",
+            "schema-error-compile": "JSON Schema 錯誤: 編譯 Schema 失敗"
+        },
+        "label": {
+            "o2j": "物件至 JSON 選項",
+            "pretty": "格式化 JSON 字串",
+            "action": "操作",
+            "property": "屬性",
+            "actions": {
+                "toggle": "在 JSON 字串與物件之間互轉",
+                "str":"永遠轉換成 JSON 字串",
+                "obj":"永遠轉換成 JS 物件"
+            }
+        }
+    },
+    "yaml": {
+        "errors": {
+            "dropped-object": "忽略非物件的 payload 訊息主體",
+            "dropped": "忽略不支援的 payload 訊息主體型別",
+            "dropped-error": "轉換 payload 訊息主體失敗"
+        }
+    },
+    "xml": {
+        "label": {
+            "represent": "XML 標籤屬性的屬性名稱",
+            "prefix": "標籤文字內容的屬性名稱",
+            "advanced": "進階選項",
+            "x2o": "XML 到物件選項"
+        },
+        "errors": {
+            "xml_js": "此節點僅能處理 XML 字串或 JS 物件."
+        }
+    },
+    "file": { 
+        "label": {
+            "filename": "檔名",
+            "action": "操作",
+            "addnewline": "替每一個訊息主體新增換行符號（\\n）?",
+            "createdir": "如果不存在就建立目錄?",
+            "outputas": "輸出",
+            "breakchunks": "分拆成區塊",
+            "breaklines": "分拆成行",
+            "filelabel": "file",
+            "sendError": "發生錯誤時傳送訊息（傳統模式）",
+            "encoding": "編碼",
+            "deletelabel": "刪除 __file__",
+            "utf8String": "UTF8 字串",
+            "binaryBuffer": "二進位緩衝區"
+        },
+        "action": {
+            "append": "附加到檔案",
+            "overwrite": "覆寫檔案",
+            "delete": "刪除檔案"
+        },
+        "output": {
+            "utf8": "單一 utf8 字串",
+            "buffer": "單一緩衝區物件",
+            "lines": "每行是一個 msg 訊息",
+            "stream": "一個緩衝區串流"
+        },
+        "status": {
+            "wrotefile": "寫入至檔案: __file__",
+            "deletedfile": "刪除檔案: __file__",
+            "appendedfile": "附加到檔案: __file__"
+        },
+        "encoding": {
+            "none": "default",
+            "native": "Native",
+            "unicode": "Unicode",
+            "japanese": "Japanese",
+            "chinese": "Chinese",
+            "korean": "Korean",
+            "taiwan": "Taiwan/Hong Kong",
+            "windows": "Windows codepages",
+            "iso": "ISO codepages",
+            "ibm": "IBM codepages",
+            "mac": "Mac codepages",
+            "koi8": "KOI8 codepages",
+            "misc": "Miscellaneous"
+        }, 
+        "errors": {
+            "nofilename": "未指定檔名",
+            "invaliddelete": "警告：無效刪除。請在設置對話方塊中使用特定的刪除選項",
+            "deletefail": "無法刪除檔案: __error__",
+            "writefail": "無法寫入檔案: __error__",
+            "appendfail": "無法附加到檔案: __error__",
+            "createfail": "檔案建立失敗: __error__"
+        },
+        "tip": "提示: 檔名請使用絕對路徑，否則路徑將會是相對於 Node-RED 的工作目錄。"
+    },
+    "split": {
+        "split": "split",
+        "intro":"依據下列型別分割 <code>msg.payload</code> 訊息主體:",
+        "object":"<b>物件</b>",
+        "objectSend":"針為每一個鍵/值對發送一個訊息",
+        "strBuff":"<b>字串</b> / <b>緩衝區</b>",
+        "array":"<b>陣列</b>",
+        "splitUsing":"分割使用",
+        "splitLength":"固定長度",
+        "stream":"當成一個訊息流來處理",
+        "addname":" 複製鍵到 "
+    },
+    "join":{
+        "join": "join",
+        "mode":{
+            "mode":"模式",
+            "auto":"自動",
+            "merge":"合併順序",
+            "reduce":"減少順序",
+            "custom":"手動"
+        },
+        "combine":"合併每個",
+        "completeMessage": "完成訊息",
+        "create":"來建立",
+        "type":{
+            "string": "一個字串",
+            "array": "一個陣列",
+            "buffer": "一個緩衝區",
+            "object": "一個鍵/值物件",
+            "merged": "一個合併物件"
+        },
+        "using":"使用此值",
+        "key":"作為鍵",
+        "joinedUsing":"合併使用",
+        "send":"傳送訊息:",
+        "afterCount":"收到計數的部分訊息後",
+        "count":"計數",
+        "subsequent":"和每個後續的訊息",
+        "afterTimeout":"在第一個訊息隨後逾時(秒)後",
+        "seconds":"秒",
+        "complete":"在有設定 <code>msg.complete</code> 屬性的訊息後",
+        "tip":"此模式假設此節點是配對的 <i>split</i> 節點, 或接收訊息有正確的設定 <code>msg.parts</code> 屬性.",
+        "too-many" : "在 join 節點中有太多待處理訊息",
+        "merge": {
+            "topics-label":"合併主題",
+            "topics":"主題",
+            "topic" : "主題",
+            "on-change":"當收到一個新主題時傳送合併訊息"
+        },
+        "reduce": {
+            "exp": "減少表達式",
+            "exp-value": "JSONata 表達式",
+            "init": "初始值",
+            "right": "反向評估(從後往前)",
+            "fixup": "修理表達式"
+        },
+        "errors": {
+            "invalid-expr": "無效的 JSONata 表達式: __error__"
+        }
+    },
+    "sort" : {
+        "sort": "sort",
+        "target" : "排序屬性",
+        "seq" : "訊息順序",
+        "key" : "鍵值",
+        "elem" : "元素值",
+        "order" : "排序",
+        "ascending" : "升序",
+        "descending" : "降序",
+        "as-number" : "視為數值",
+        "invalid-exp" : "在 sort 節點中存在無效的 JSONata 表達式",
+        "too-many" : "在 sort 節點中有太多待處理訊息",
+        "clear" : "清空 sort 節點中的待處理訊息"
+    },
+    "batch" : {
+        "batch": "batch",
+        "mode": {
+            "label" : "模式",
+            "num-msgs" : "依據訊息數群組",
+            "interval" : "依據時間間隔群組",
+            "concat" : "串連順序"
+        },
+        "count": {
+            "label" : "訊息數",
+            "overlap" : "重疊",
+            "count" : "計數",
+            "invalid" : "無效的訊息計數或重疊數量"
+        },
+        "interval": {
+            "label" : "時間間隔",
+            "seconds" : "秒",
+            "empty" : "當沒有訊息到達時傳送空訊息"
+        },
+        "concat": {
+            "topics-label": "主題",
+            "topic" : "主題"
+        },
+        "too-many" : "在 batch 節點中有太多待處理訊息",
+        "unexpected" : "未預期的模式",
+        "no-parts" : "在訊息中沒有 parts 屬性"
+    }
+}
