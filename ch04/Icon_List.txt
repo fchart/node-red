@@ -1,0 +1,4 @@
+https://fontawesome.com/v4/icons/
+https://fontawesome.com/v4/cheatsheet/ 
+https://github.com/Paul-Reed/weather-icons-lite/blob/master/css_mappings.md  
+https://klarsys.github.io/angular-material-icons/
