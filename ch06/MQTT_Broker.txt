@@ -1,1 +1,43 @@
+常見免費MQTT Broker
 
+HiveMQ
+=======================================================
+broker.hivemq.com 或 broker.mqttdashboard.com
+
+TCP Port：1883
+
+WebsocketPort：8000
+-------------------------------------------------------
+
+Mosquitto
+=======================================================
+test.mosquitto.org
+
+TCP Port：1883 / 8883(TLS，加密)
+
+WebsocketPort：8080 / 8081(TLS)
+-------------------------------------------------------
+
+EMQX
+=======================================================
+
+broker.emqx.io
+
+TCP Port：1883 / 8883(TLS)
+
+WebsocketPort：8083 / 8084(TLS)
+-------------------------------------------------------
+
+Eclipseprojects
+=======================================================
+
+mqtt.eclipseprojects.io 
+
+TCP Port：1883 / 8883(TLS)
+
+WebsocketPort：
+
+ws://mqtt.eclipseprojects.io:80/mqtt (預設80port)
+
+wss://mqtt.eclipseprojects.io:443/mqtt (預設443port)
+-------------------------------------------------------
