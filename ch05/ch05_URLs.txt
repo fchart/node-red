@@ -1,1 +1,7 @@
+https://www.googleapis.com/books/v1/volumes?maxResults=3&q=Python&projection=lite
 
+
+https://openweathermap.org/
+
+
+https://api.openweathermap.org/data/2.5/weather?q=<城市>,<國別>&units=metric&lang=zh_tw&appid=<API_key>
