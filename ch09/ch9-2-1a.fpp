@@ -18,7 +18,7 @@ START
 id2
 2       	 <--TYPE
 285       	 <--LEFT
-387       	 <--TOP
+319       	 <--TOP
 70       	 <--WIDTH
 30       	 <--HEIGHT
 16777215       	 <--BACKCOLOR
@@ -77,9 +77,9 @@ OUTPUT
 
 id6
 91       	 <--TYPE
-235       	 <--LEFT
-317       	 <--TOP
-170       	 <--WIDTH
+422       	 <--LEFT
+253       	 <--TOP
+129       	 <--WIDTH
 40       	 <--HEIGHT
 16777215       	 <--BACKCOLOR
 0       	 <--BORDERCOLOR
@@ -87,7 +87,7 @@ id6
 -reserved 1-
 -reserved 2-
 OUTPUT
-歡迎使用JavaScript
+女性網友您好!
 
 
   
@@ -101,12 +101,12 @@ id3,id4
 id4,id5
 0
 YES
-id5,id6
+id5,id2
 0
 
+id4,id6
+0
+NO
 id6,id2
 0
 
-id4,id2
--125
-NO
